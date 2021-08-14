@@ -18,8 +18,20 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
-    quotes: ["error", "double"], //더블 쿼터 사용
-    "@typescript-eslint/quotes": ["error", "double"], //더블 쿼터 사용
+    quotes: [
+      "error",
+      "double",
+      {
+        allowTemplateLiterals: true,
+      },
+    ], //더블 쿼터 사용
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      {
+        allowTemplateLiterals: true,
+      },
+    ], //더블 쿼터 사용
     "no-unused-vars": "off", //사용안한 변수 경고 중복
     "spaced-comment": "off", //주석을 뒤에 쓰지 말라는 경고
     "@typescript-eslint/no-unused-vars": "warn", //사용안한 변수는 경고
@@ -46,6 +58,7 @@ module.exports = {
     "no-confusing-arrow": "off",
     "react/jsx-curly-newline": "off",
     indent: "off",
+    "import/no-unresolved": "off",
     "react/jsx-filename-extension": [
       1,
       { extensions: [".js", ".jsx", ".tsx"] }, //jsx사용가능한 확장자 설정
